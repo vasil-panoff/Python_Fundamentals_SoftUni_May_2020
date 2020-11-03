@@ -1,6 +1,6 @@
 input_data = input()
 
-old_string = input_data
+old_strings = input_data
 new_string = ""
 while input_data != "Travel":
     args = input_data.split(":")
@@ -10,7 +10,7 @@ while input_data != "Travel":
         index = int(args[1])
         string = args[2]
 
-        new_string = old_string[:index] + string + old_string[index:]
+        new_string = old_strings[:index] + string + old_strings[index:]
         print(new_string)
     elif command == "Remove Stop":
         index = int(args[1])
@@ -24,7 +24,7 @@ while input_data != "Travel":
         switch_1 = index
         switch_2 = string
         switch = string
-        if new_string in old_string:
+        if new_string in old_strings:
             switch_1 = switch_2
         print(new_string)
 
